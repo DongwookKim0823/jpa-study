@@ -1,7 +1,9 @@
-package hellojpa;
+package jpabook.jpashop;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
 public class JpaMain {
 
@@ -14,11 +16,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-
-            Member member = new Member();
-            member.setUsername("C");
-
-            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
